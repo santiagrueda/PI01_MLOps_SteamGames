@@ -156,29 +156,26 @@ def recomendacion_juego(id_producto: int):
     tdfid_matriz = tfidf.fit_transform(muestra['review'])
     cosine_similarity = linear_kernel( tdfid_matriz, tdfid_matriz)
 
-    # Compruebo si el Id proporcionado existe en la muestra
-    if id_producto not in muestra['steam_id'].values:
+    # Compruebo si el Id proporcionado existe en la muestra, si no, devuelvo un mensaje de error
+    if id_producto not in muestra['id'].values:
         return {'Mensaje': 'No existe el id del juego.'}
     
     # Obtengo los géneros del juego de las columnas del df
     generos = muestra.columns[4:27]
     
     # Filtro para incluir juegos con géneros coincidentes pero con títulos diferentes
-    filtered_df = muestra[(muestra[generos] == 1).any(axis=1) & (muestra['steam_id'] != id_producto)]
+    filtered_df = muestra[(muestra[generos] == 1).any(axis=1) & (muestra['id'] != id_producto)]
     
     # Calculo similitud del coseno entre las reseñas de los juegos filtrados
     tdfid_matrix_filtered = tfidf.transform(filtered_df['review'])
     cosine_similarity_filtered = linear_kernel(tdfid_matrix_filtered, tdfid_matrix_filtered)
     
     # Genero una lista ordenando los valores de la lista de similitud del coseno de mayor a menor y seleccionando los 5 primeros juegos
-    index = muestra[muestra['steam_id'] == id_producto].index[0]
+    index = muestra[muestra['id'] == id_producto].index[0]
     sim_cosine = list(enumerate(cosine_similarity_filtered[index]))
     similar_scores = sorted(sim_cosine, key=lambda x: x[1], reverse=True)
     similar_ind = [i for i, _ in similar_scores[1:6]]
     similar_juegos = filtered_df['title'].iloc[similar_ind].values.tolist()
     
     return {'juegos recomendados': list(similar_juegos)}
-
-
-
 
