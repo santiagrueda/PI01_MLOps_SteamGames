@@ -1,16 +1,16 @@
-![Pandas] (https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
-![Numpy] (https://img.shields.io/badge/-Numpy-333333?style=flat&logo=numpy)
-![Seaborn] (https://img.shields.io/badge/-Seaborn-333333?style=flat&logo=seaborn)
-![Matplotlib] (https://img.shields.io/badge/-Matplotlib-333333?style=flat&logo=matplotlib)
-![Scikitlearn] (https://img.shields.io/badge/-Scikitlearn-333333?style=flat&logo=scikitlearn)
-![FastAPI] (https://img.shields.io/badge/-FastAPI-333333?style=flat&logo=fastapi)
-![Docker] (https://img.shields.io/badge/-Docker-333333?style=flat&logo=docker)
-![Render] (https://img.shields.io/badge/-Render-333333?style=flat&logo=render)
+![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
+![Numpy](https://img.shields.io/badge/-Numpy-333333?style=flat&logo=numpy)
+![Matplotlib](https://img.shields.io/badge/-Matplotlib-333333?style=flat&logo=matplotlib)
+![Seaborn](https://img.shields.io/badge/-Seaborn-333333?style=flat&logo=seaborn)
+![Scikitlearn](https://img.shields.io/badge/-Scikitlearn-333333?style=flat&logo=scikitlearn)
+![FastAPI](https://img.shields.io/badge/-FastAPI-333333?style=flat&logo=fastapi)
+![Docker](https://img.shields.io/badge/-Docker-333333?style=flat&logo=docker)
+![Render](https://img.shields.io/badge/-Render-333333?style=flat&logo=render)
 
-# PI01_MLOps_SteamGames
-# <h1 align=center>**`Machine Learning Operations (MLOps)
+# <h1 align=center>**`PI01_MLOps_SteamGames`**</h1>
+# <h1 align=center>**`Machine Learning Operations (MLOps)`**</h1>
 
-<p aling=center><img src=https://user-images.githubusercontent.com/67664604/217914153-1eb00e25-ac08-4dfa-aaf8-53c09038f082.png><p>
+<p align=center><img src=https://user-images.githubusercontent.com/67664604/217914153-1eb00e25-ac08-4dfa-aaf8-53c09038f082.png><p>
 
 ## **Introdución**
 Este proyecto simula el rol de un MLOps Engineer, se entregan unos datos y tiene como objetivo crear una API desplegada al público donde se usa un modelo de recomendacion que es basado en Machine Learning para la plataforma multinacional de videojuegos Steam. La API permite ofrecer una interfaz intituiva para los usuarios y así consumir la información que se ofrece, como el sistema de recomendación, un análisis de sentimientos sobre los comentarios de los ususarios sobre los juegos y datos sobre géneros de videojuegos y fechas.
@@ -82,7 +82,7 @@ En el desarrollo de la API se utilizó el framework FastAPI, creando los siguien
 
 * **def recomendacion_juego( id de producto ):** Ingresando el id de producto, deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.
 
-Todas estas funciones desarrolladas para la API se encuentran en el archivo [main.py]()
+Todas estas funciones desarrolladas para la API se encuentran en el archivo [main.py](https://github.com/santiagrueda/PI01_MLOps_SteamGames/blob/main/main.py)
 
 ## Video
 
@@ -90,7 +90,7 @@ En este [video]() encuentran una breve explicación de este proyecto, haciendo e
 
 ## **Link**
 
-* [Deploy de la API]()
+* [Deploy de la API](https://pi01-prueba.onrender.com/)
 
 ## **Contacto**
 * Linkedin: [Santiago Rueda Mira](https://www.linkedin.com/in/santiago-rueda-mira-050b55113/)
