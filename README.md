@@ -84,9 +84,11 @@ En el desarrollo de la API se utilizó el framework FastAPI, creando los siguien
 
 Todas estas funciones desarrolladas para la API se encuentran en el archivo [main.py](https://github.com/santiagrueda/PI01_MLOps_SteamGames/blob/main/main.py)
 
+> *NOTA: La función 'recomendacion_juego' fue realizada con una muestra de 4200 datos del dataframe original, esto debido a las limitaciones de almacenamiento y procesamiento que posee Render, por lo que se debe trabajar con esta muestra para que permita ejecutar la función sin ningún tipo de problema.*
+
 ## Video
 
-En este [video]() encuentran una breve explicación de este proyecto, haciendo énfasis en el funcionamiento de la API con sus endpoints.
+En este [video](https://www.youtube.com/watch?v=heSxrgRBKwQ) encuentran una breve explicación de este proyecto, haciendo énfasis en el funcionamiento de la API con sus endpoints.
 
 ## **Link**
 
