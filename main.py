@@ -149,7 +149,7 @@ def sentiment_analysis(developer: str) -> dict:
 def recomendacion_juego(id_producto: int):
 
     # Creo una muestra a partir del df original para mejorar el desempeño del sistema de predicción ya que el original contiene muchos más datos
-    muestra = df.head(6000)
+    muestra = df.head(5700)
     tfidf = TfidfVectorizer(stop_words='english')
     muestra = muestra.fillna("") 
 
