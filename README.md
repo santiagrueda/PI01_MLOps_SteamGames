@@ -12,12 +12,12 @@
 
 <p align=center><img src=https://user-images.githubusercontent.com/67664604/217914153-1eb00e25-ac08-4dfa-aaf8-53c09038f082.png><p>
 
-## **Introdución**
-Este proyecto simula el rol de un MLOps Engineer, se entregan unos datos y tiene como objetivo crear una API desplegada al público donde se usa un modelo de recomendacion que es basado en Machine Learning para la plataforma multinacional de videojuegos Steam. La API permite ofrecer una interfaz intituiva para los usuarios y así consumir la información que se ofrece, como el sistema de recomendación, un análisis de sentimientos sobre los comentarios de los ususarios sobre los juegos y datos sobre géneros de videojuegos y fechas.
+## **Introducción**
+Este proyecto simula el rol de un MLOps Engineer, se entregan unos datos y tiene como objetivo crear una API desplegada de manera pública donde se usa un modelo de recomendacion basado en Machine Learning para la plataforma multinacional de videojuegos Steam. La API permite ofrecer una interfaz intituiva para los usuarios y así consumir la información que se ofrece, como el sistema de recomendación, un análisis de sentimientos sobre los comentarios de los ususarios sobre los juegos y datos sobre géneros de videojuegos y fechas.
 
 ## Datos proporcionados
 
-se proporcionaron tres archivos .JSON:
+Se proporcionaron tres archivos .JSON:
 
 * **australian_users_items.json** es un dataset que contiene información sobre los juegos que juegan todos los usuarios, así como el tiempo acumulado que cada usuario jugó en un juego específico.
 
@@ -86,11 +86,12 @@ Todas estas funciones desarrolladas para la API se encuentran en el archivo [mai
 
 ## Video
 
-En este [video]() encuentran una breve explicación de este proyecto, haciendo enfasis en el funcionamiento de la API y sus endpoints.
+En este [video]() encuentran una breve explicación de este proyecto, haciendo énfasis en el funcionamiento de la API con sus endpoints.
 
 ## **Link**
 
 * [Deploy de la API](https://pi01-prueba.onrender.com/)
+* [GitHub](https://github.com/santiagrueda)
 
 ## **Contacto**
 * Linkedin: [Santiago Rueda Mira](https://www.linkedin.com/in/santiago-rueda-mira-050b55113/)
