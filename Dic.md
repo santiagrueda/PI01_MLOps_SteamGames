@@ -2,7 +2,8 @@
 
  * **output_steam_games.json**  dataset que contiene datos relacionados con los juegos en general, como título,  desarrolladora, características técnicas, etiquetas, entre otros datos.
 
-Las variables que contiene son:  
+Las variables que contiene son:
+
     * **publisher**: empresa publicadora del contenido.  
     * **genres**: género del item, es decir, del juego. Esta formado por una lista de uno o mas géneros por registro.  
     * **app_name**: nombre del item, es decir, del juego.  
@@ -20,6 +21,7 @@ Las variables que contiene son:
 * **australian_user_reviews.json**  dataset que contiene las reseñas de los usuarios realizados sobre los juegos que consumen, adicionalmente, como datos de si recomiendan o no ese juego. También presenta el id del usuario que comenta con su url del perfil y el id del juego que comentó.
 
 Las variables que contiene son:
+
     * **user_id**: identificador único para el usuario.  
     * **user_url**: url del perfil del usuario en streamcommunity.  
     * **reviews**: contiene una lista de diccionarios. Para cada usuario se tiene uno o más diccionarios con el review.  
@@ -34,6 +36,7 @@ Las variables que contiene son:
 * **australian_users_items.json**  dataset que contiene información sobre los juegos consumidos por todos los usuarios, así como el tiempo acumulado que cada usuario ha jugado en cada juego.
 
 Las variables que contiene son:  
+
     * **user_id**: contiene un identificador único del usuario.  
     * **items_count**: número entero que indica la cantidad de juegos que ha consumido el usuario.  
     * **steam_id**: identificador único para la plataforma.  
