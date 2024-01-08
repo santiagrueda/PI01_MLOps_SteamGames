@@ -25,6 +25,8 @@ Se proporcionaron tres archivos .JSON:
 
 * **output_steam_games.json** es un dataset que contiene datos relacionados con los juegos en sí, como los título, el desarrollador, entre otros datos.
 
+En el documento [Diccionario](https://github.com/santiagrueda/PI01_MLOps_SteamGames/blob/main/Dic.md) encuentran cada una de las variables al detalle de los datasets trabajados.
+
 ## **Librerías requeridas**
 + Pandas
 + Numpy
