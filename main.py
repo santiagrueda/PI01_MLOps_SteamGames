@@ -179,3 +179,49 @@ def recomendacion_juego(id_producto: int):
     
     return {'juegos recomendados': list(similar_juegos)}
 
+
+
+@app.get('/recomendacion_usuario',
+         description=""" <font color="green">
+                    INDICACIONES<br>
+                    1. Haga clik en "Try it out".<br>
+                    2. Ingrese el id de usuario.<br>
+                    3. Haga click en "Execute".<br>
+                    4. Bajar hasta 'Responses'
+                    </font>
+                    """,
+         tags=["Recomendación"])
+def recomendacion_usuario(user_id):
+
+    # Creo una muestra a partir del df original
+    muestra = df.head(4200)
+
+    # Calculo la similitud del coseno entre las reseñas
+    tfidf = TfidfVectorizer(stop_words='english')
+    muestra = muestra.fillna("") 
+    tdfid_matriz = tfidf.fit_transform(muestra['review'])
+    cosine_similarity = linear_kernel(tdfid_matriz, tdfid_matriz)
+
+    # Compruebo si el Id de usuario existe en la muestra sino devulvo un mensaje de error
+    if user_id not in muestra['user_id'].values:
+        return {'Mensaje': 'No existe el id de usuario.'}
+
+    # Obtengo los índices de los juegos que el usuario ha jugado
+    user_indices = muestra[muestra['user_id'] == user_id].index.tolist()
+
+    # Crear una lista de juegos recomendados
+    juegos_recomendados = []
+    for user_index in user_indices:
+        # Obtener los juegos similares al juego ingresado
+        sim_cosine = list(enumerate(cosine_similarity[user_index]))
+        similar_scores = sorted(sim_cosine, key=lambda x: x[1], reverse=True)
+        similar_ind = [i for i, _ in similar_scores[1:6]]  # Eliminar el primer elemento que es el propio juego
+        similar_juegos = muestra['title'].iloc[similar_ind].values.tolist()
+
+        # Agregar los juegos similares a la lista de juegos recomendados evitando duplicados si es posible
+        juegos_recomendados.extend([juego for juego in similar_juegos if juego not in juegos_recomendados])
+
+    # Lista de 5 juegos recomendados
+    juegos_recomendados = juegos_recomendados[:5]
+
+    return {'Juegos Recomendados': juegos_recomendados}
