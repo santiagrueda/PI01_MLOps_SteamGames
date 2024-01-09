@@ -85,7 +85,7 @@ En el desarrollo de la API se utilizó el framework FastAPI, creando los siguien
 
 Todas estas funciones desarrolladas para la API se encuentran en el archivo [main.py](https://github.com/santiagrueda/PI01_MLOps_SteamGames/blob/main/main.py)
 
-> *Importante: Los dos modelos de recomendación, recomendacion_juego y recomendacion_usuario se agregaron a la API, pero sólo recomendacion_juego se pudo deployar en Render debido que  la predicción excedía la capacidad de almacenamiento disponible. Por lo tanto, para utilizar la función recomendacion_juego se puede ejecutar la API de manera local.*
+> *Importante: Los dos modelos de recomendación, recomendacion_juego y recomendacion_usuario se agregaron a la API, pero sólo recomendacion_juego se pudo deployar en Render debido que  la predicción excedía la capacidad de almacenamiento disponible. Por lo tanto, para utilizar la función recomendacion_usuario se puede ejecutar la API de manera local.*
 
 ## Video
 
