@@ -60,7 +60,7 @@ Se realizó un EDA con el objetivo de identificar directamente tendencias, valor
 
 ## Modelo de Machine Learning
 
-Se creó un modelo de recomendación, el cual se le ingresa un id de producto y este devuelve una lista de 5 juegos recomendados similares al producto ingresado. Para medir la similitud entre los juegos, se utilizó la **similitud del coseno** que es un método utilizado para evaluar la similitud entre dos vectores en un espacio multidimensional. En el contexto de sistemas de recomendación y análisis de datos, la similitud del coseno se utiliza para determinar cuán similares son dos conjuntos de datos, y se calcula utilizando el coseno del ángulo entre los vectores que representan esos datos.
+Se crearon dos modelos de recomendación que tambien son basados en Machine Learning al igual que el análisis de sentimientos, cada modelo devuelve una lista de 5 juegos recomendados ya sea ingresando el id de un juego o el id de usuario. se utilizó la **similitud del coseno** que es una medida comúnmente utilizada para evaluar la similitud entre dos vectores en un espacio multidimensional. De esta manera encontrar usuarios o juegos similares al usuario/juego activo (es decir, los usuarios/juegos para los que se les quiere recomendar) y utilizando sus preferencias para predecir las valoraciones del usuario/juego activo cual sea el caso de la entrada del modelo.
 
 ## Desarrollo de la API
 
@@ -85,7 +85,7 @@ En el desarrollo de la API se utilizó el framework FastAPI, creando los siguien
 
 Todas estas funciones desarrolladas para la API se encuentran en el archivo [main.py](https://github.com/santiagrueda/PI01_MLOps_SteamGames/blob/main/main.py)
 
-> *NOTA: La función 'recomendacion_juego' fue realizada con una muestra de 4200 datos del dataframe original, esto debido a las limitaciones de almacenamiento y procesamiento que posee Render, por lo que se debe trabajar con esta muestra para que permita ejecutar la función sin ningún tipo de problema.*
+> *Importante: Los dos modelos de recomendación, recomendacion_juego y recomendacion_usuario se agregaron a la API, pero sólo recomendacion_juego se pudo deployar en Render debido que  la predicción excedía la capacidad de almacenamiento disponible. Por lo tanto, para utilizar la función recomendacion_juego se puede ejecutar la API de manera local.*
 
 ## Video
 
